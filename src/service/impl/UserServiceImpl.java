@@ -3,8 +3,6 @@ package service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.org.apache.regexp.internal.recompile;
-
 import dao.UserDao;
 import dao.impl.UserDaoImpl;
 import exception.UserException;
@@ -73,7 +71,7 @@ public class UserServiceImpl<E> implements UserService {
 	@Override
 	public PageUser pageUser(int page, int size) {
 		// TODO Auto-generated method stub
-		PageUser<User> pageUser=new PageUser<>();
+		PageUser<User> pageUser = new PageUser<>();
 		pageUser.setAllsize(userdao.getAllUser().size());
 		pageUser.setList(userdao.getLimit(page, size));
 		pageUser.setPage(page);

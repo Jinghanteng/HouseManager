@@ -49,11 +49,12 @@
 </c:forEach>
 </table>
 
+
+<h5>当前是${pageInfo.page } 页，总共是  ${pageInfo.pageCount }页</h5>
 <c:choose>
 <c:when test="${pageInfo.page>1 }"><a href="/HouseManager/to/houseinfo?page=${pageInfo.page-1 }">上一页</a></c:when>
 <c:otherwise><a>上一页</a></c:otherwise>
 </c:choose>
-<h5>当前是${pageInfo.page } 页，总共是  ${pageInfo.pageCount }页</h5>
 <c:choose>
 <c:when test="${pageInfo.page<pageInfo.pageCount }"><a href="/HouseManager/to/houseinfo?page=${pageInfo.page+1 }">下一页</a></c:when>
 <c:otherwise><a>下一页</a></c:otherwise>
